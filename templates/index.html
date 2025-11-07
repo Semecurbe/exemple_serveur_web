@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Horloge Serveur Flask/JS</title>
+    <style>
+        #horloge {
+            font-size: 3em;
+            font-family: monospace;
+            text-align: center;
+            margin-top: 50px;
+            color: darkred; /* Pour différencier de la version JS client */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Horloge - requete envoyé par du javascript à la partie python par la commande fetch à l'adresse time_update</h1>
+    <div id="horloge">Connexion au serveur...</div>
+
+    <script>
+        // Fonction qui va chercher l'heure auprès du serveur Flask
+        function fetchServerTime() {
+            // Utilisation de l'API fetch (moderne) pour faire une requête GET
+            fetch('/time_update')
+                .then(response => {
+                    // Vérifie si la réponse est OK (statut HTTP 200)
+                    if (!response.ok) {
+                        throw new Error('Erreur réseau ou du serveur');
+                    }
+                    // Parse la réponse JSON
+                    return response.json();
+                })
+                .then(data => {
+                    // Met à jour l'élément HTML avec la valeur 'time' reçue du JSON
+                    document.getElementById('horloge').innerHTML = data.time;
+                })
+                .catch(error => {
+                    console.error('Erreur lors de la récupération de l\'heure :', error);
+                    document.getElementById('horloge').innerHTML = "Erreur de connexion !";
+                });
+        }
+
+        // 1. Appel immédiat au chargement de la page
+        fetchServerTime();
+
+        // 2. Met à jour l'heure toutes les 1000 millisecondes (1 seconde) en refaisant un appel au serveur
+        setInterval(fetchServerTime, 1000);
+    </script>
+
+</body>
+</html>

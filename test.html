@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemple HTML et CSS Simple</title>
+
+    <style>
+        /* S'applique à tous les éléments <h1> */
+        h1 {
+            color: blue; /* Définit la couleur du texte en bleu */
+            text-align: center; /* Centre le texte */
+            border-bottom: 2px solid lightgray; /* Ajoute une ligne de séparation */
+            padding-bottom: 10px;
+        }
+
+        /* S'applique à l'élément avec l'ID 'paragraphe-style' */
+        #paragraphe-style {
+            background-color: #f0f0f0; /* Fond gris très clair */
+            padding: 15px;
+            border-radius: 5px; /* Coins arrondis */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Mon Premier Exemple de Page Web</h1>
+
+    <p id="paragraphe-style">
+        Ce paragraphe utilise les règles CSS définies dans la balise **&lt;style&gt;** (CSS Interne) pour son fond, ses marges internes et ses coins.
+    </p>
+
+    <p style="color: green; font-weight: bold;">
+        Ce deuxième paragraphe utilise le **CSS En Ligne**. L'attribut 'style' est placé directement dans la balise &lt;p&gt; pour rendre le texte **vert** et en **gras**.
+    </p>
+
+</body>
+</html>
