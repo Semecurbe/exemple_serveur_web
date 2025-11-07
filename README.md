@@ -1,38 +1,20 @@
 # Exemple utilisation de flask
 
+## Préalable
+
+Pour installer une version de python tu peux installer directement cette distribution qui intègre python avec un installateur dédié pour les librairies spécifique comme `flask` <https://repo.anaconda.com/archive/Anaconda3-2025.06-0-MacOSX-x86_64.pkg>.
+
+Ensuite on peut installer dans un terminal la librairie `flask` avec la commande (on doit voir `base` en début de chaque prompt maintenant, l'environnement python anaconda est chargée) :
+
+``` bash
+conda install anaconda::flask
+```
+
+Puis on télécharge ce dépot sous la forme d'un zip et on lance les exemples les exemples du répertoire `code`.
+
 ## Simple server web
 
 ### Premier test avec une simple page web
-
-On ouvre un terminal, puis on crée un répertoire, par exemple dev.
-
-``` bash
-mkdir dev
-```
-
-Ensuite, on se positionne dans le répertoire dev :
-
-``` bash
-cd dev
-```
-
-On crée ensuite un environnement virtuel de développement afin d'installer les paquets nécessaires sans polluer le python de OS.
-
-``` bash
-python3 -m venv code
-```
-
-On charge ensuite l'environnement de développement :
-
-``` bash
-. code/bin/activate 
-```
-
-Ensuite, on installe la librairie flask (application pour faire un serveur web) :
-
-``` bash
-pip install flask
-```
 
 Il suffit ensuite de créer un script python dans le répertoire avec le nom \`simple_server.py\`.
 
@@ -238,7 +220,16 @@ Et on ouvre l'explorateur à l'adresse [127.0.0.1:5000](127.0.0.1:5000). on obti
 
 ![](heure.png)
 
-On constate que l'heure change toute les secondes, la partie client (dans l'explorateur) fait une requête toutes les secondes à la partie serveur python à l'adresse [127.0.0.1:5000/time_update](127.0.0.1:5000/time_update).
+On constate que l'heure change toute les secondes, la partie client (dans l'explorateur) fait une requête toutes les secondes à la partie serveur python avec la fonction du code `index.html` :
+
+```         
+    setInterval(fetchServerTime, 1000);
+```
+
+**setInterval** est une fonction javascript qui prend comme argument une fonction (ici **fetchServerTime**) et un temps (**1000**):
+
+-   **fetchServerTime** fonction qui recupere l'heure à l'adresse  [127.0.0.1:5000/time_update](127.0.0.1:5000/time_update) grâce à la fonction javascript `fetch`.
+-   **1000** est le timeout qui permet de repéter le lancement de la fonction **fetchServerTime** toutes les secondes.
 
 D'ailleurs si on va à l'adresse [127.0.0.1:5000/time_update](127.0.0.1:5000/time_update), on voit ceci :
 
@@ -248,9 +239,7 @@ On voit que la partie python renvoie l'heure sous la forme d'un json (même prin
 
 Si on regarde dans le terminal, on constate que toutes les secondes le serveur python renvoie l'heure à la partie client. L'adresse `@app.route('/time_update')` est la relation entre l'adresse appelé par le client et le programe associé `def time_update():`.
 
-::: callout-tip
 En python \@ est un décorateur de fonction mais c'est pas souvent utilisé mais dans le cadre de flask cela permet d'accrocher une adresse par exemple time_update à la fonction time_update.
-:::
 
 Cette exemple a montré comment fonctionne une communication entre le client (explorateur) et la partie serveur (python-flask) sans avoir à recharger la page.
 
@@ -305,14 +294,18 @@ Il y a plein de framework (librairies) qui permettent de faire du html jolie com
 
 ### Fonctionnalités avancées en javascript
 
-Le javascript n'est pas un langague très agréable, il a donc été développé des librairies plus haut niveau basé sur du javascript pout simplifier la programmation, historiquement on jquery mais qui devient vieux. Maintenat on utilises plutôt React (développé au départ par facebook pour ses besoins) ou vue.js.
+Le javascript n'est pas un langague très agréable, il a donc été développé des librairies plus hauts niveaux basées sur du javascript pout simplifier la programmation, historiquement on avait jquery mais qui devient obscolète. Maintenant on utilise plutôt `React` (développé au départ par facebook pour ses besoins) ou `vue.js`.
 
-### Comprendre le fonctionnement client en utilisant les outils 
+### Comprendre le fonctionnement client en utilisant les outils
 
-Dans chrome ou firefox il y a des outils d'analyse du site web et des echanges, tu as même une console qui permet quid'interargir avec la page.
+Dans chrome ou firefox il y a des outils d'analyse du site web et des echanges, tu as même une console qui permet d'interargir avec la page.
 
 ![](outils.png)
 
 Dans cette page, on voit les requetes toutes secondes aux serveurs :
 
 ![](outils_suite.png)
+
+### Video pour installer anaconda
+
+[![Cliquer pour regarder la vidéo sur YouTube](https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
