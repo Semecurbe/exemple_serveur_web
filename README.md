@@ -1,8 +1,10 @@
-# Exemple utilisation de flask
+# Comment fonctionne un serveur WEB et son interaction avec le navigateur
+
+Ce dépot présente de manière simple comment fonctionne un site WEB, les exemples utilisent la librairie python `flask` qui est dédié à la création de serveur WEB. 
 
 ## Préalable
 
-Pour installer une version de python tu peux installer directement cette distribution qui intègre python avec un installateur dédié pour les librairies spécifique comme `flask` <https://repo.anaconda.com/archive/Anaconda3-2025.06-0-MacOSX-x86_64.pkg>.
+Pour installer une version de python, on peut installer directement cette distribution qui intègre python avec un installateur dédié pour les librairies spécifique comme `flask` <https://repo.anaconda.com/archive/Anaconda3-2025.06-0-MacOSX-x86_64.pkg>.
 
 Ensuite on peut installer dans un terminal la librairie `flask` avec la commande (on doit voir `base` en début de chaque prompt maintenant, l'environnement python anaconda est chargée) :
 
@@ -58,7 +60,7 @@ Press CTRL+C to quit
 
 L'affichage dans l'explorateur est le suivant :
 
-![page web helloworld](./images/helloworld.png){fig-align="center"}
+![page web helloworld](./images/helloworld.png)
 
 ### Analyse des message délivrés par python
 
@@ -243,7 +245,7 @@ En python \@ est un décorateur de fonction mais c'est pas souvent utilisé mais
 
 Cette exemple a montré comment fonctionne une communication entre le client (explorateur) et la partie serveur (python-flask) sans avoir à recharger la page.
 
-## Généralité
+## Annexes
 
 ### Esthétique
 
@@ -296,7 +298,7 @@ Il y a plein de framework (librairies) qui permettent de faire du html jolie com
 
 Le javascript n'est pas un langague très agréable, il a donc été développé des librairies plus hauts niveaux basées sur du javascript pout simplifier la programmation, historiquement on avait jquery mais qui devient obscolète. Maintenant on utilise plutôt `React` (développé au départ par facebook pour ses besoins) ou `vue.js`.
 
-### Comprendre le fonctionnement client en utilisant les outils
+### Comprendre le fonctionnement client en utilisant les outils des explorateurs 
 
 Dans chrome ou firefox il y a des outils d'analyse du site web et des echanges, tu as même une console qui permet d'interargir avec la page.
 
