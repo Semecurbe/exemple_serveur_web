@@ -120,7 +120,7 @@ Si on ouvre la page web à l'adresse <http://127.0.0.1:5000/hello/toto>, on obti
 
 Si on ouvre à nouveau à l'adresse [127.0.0.1:5000](127.0.0.1:5000), on retrouve notre simple helloworld :
 
-![page web helloworld](./images/helloworld.png){fig-align="center"}
+![page web helloworld](./images/helloworld.png)
 
 ## Un code avec du javascript pour faire un peu plus dynamique
 
