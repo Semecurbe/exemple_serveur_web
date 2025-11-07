@@ -58,7 +58,7 @@ Press CTRL+C to quit
 
 L'affichage dans l'explorateur est le suivant :
 
-![page web helloworld](helloworld.png){fig-align="center"}
+![page web helloworld](./images/helloworld.png){fig-align="center"}
 
 ### Analyse des message délivrés par python
 
@@ -114,11 +114,11 @@ python helloworld_name.py
 
 Si on ouvre la page web à l'adresse <http://127.0.0.1:5000/hello/toto>, on obtient :
 
-![Affichage de la page helloworld avec le nom toto](helloworld_name.png)
+![Affichage de la page helloworld avec le nom toto](./images/helloworld_name.png)
 
 Si on ouvre à nouveau à l'adresse [127.0.0.1:5000](127.0.0.1:5000), on retrouve notre simple helloworld :
 
-![page web helloworld](helloworld.png){fig-align="center"}
+![page web helloworld](./images/helloworld.png){fig-align="center"}
 
 ## Un code avec du javascript pour faire un peu plus dynamique
 
@@ -218,7 +218,7 @@ python heure.py
 
 Et on ouvre l'explorateur à l'adresse [127.0.0.1:5000](127.0.0.1:5000). on obtient :
 
-![](heure.png)
+![](./images/heure.png)
 
 On constate que l'heure change toute les secondes, la partie client (dans l'explorateur) fait une requête toutes les secondes à la partie serveur python avec la fonction du code `index.html` :
 
@@ -233,7 +233,7 @@ On constate que l'heure change toute les secondes, la partie client (dans l'expl
 
 D'ailleurs si on va à l'adresse [127.0.0.1:5000/time_update](127.0.0.1:5000/time_update), on voit ceci :
 
-![](time_update.png)
+![](./images/time_update.png)
 
 On voit que la partie python renvoie l'heure sous la forme d'un json (même principe qu'un fichier de configuration xml).
 
@@ -300,11 +300,11 @@ Le javascript n'est pas un langague très agréable, il a donc été développé
 
 Dans chrome ou firefox il y a des outils d'analyse du site web et des echanges, tu as même une console qui permet d'interargir avec la page.
 
-![](outils.png)
+![](./images/outils.png)
 
 Dans cette page, on voit les requetes toutes secondes aux serveurs :
 
-![](outils_suite.png)
+![](./images/outils_suite.png)
 
 ### Video pour installer anaconda
 
