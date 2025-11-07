@@ -308,4 +308,4 @@ Dans cette page, on voit les requetes toutes secondes aux serveurs :
 
 ### Video pour installer anaconda
 
-[![Cliquer pour regarder la vidéo sur YouTube](https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+[![Activer un environnement Python avec Anaconda](https://img.youtube.com/vi/nSS_uGjwDDA/maxresdefault.jpg)](https://www.youtube.com/watch?v=nSS_uGjwDDA)
